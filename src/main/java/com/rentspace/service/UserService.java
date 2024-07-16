@@ -42,10 +42,6 @@ public class UserService extends ModelMapperFuncs {
         return buildResponse(appUser);
     }
 
-    public ResponseUserDTO getByEmail(String email) {
-        return buildResponse(get(email));
-    }
-
     public ResponseUserDTO update(Long id, PersistUserDTO persistUserDTO) {
 
         AppUser user = get(id);

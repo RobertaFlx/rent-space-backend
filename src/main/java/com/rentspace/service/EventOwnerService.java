@@ -17,6 +17,7 @@ public class EventOwnerService extends ModelMapperFuncs {
     private EventOwnerRepository eventOwnerRepository;
 
     public void save(EventOwner model) { this.eventOwnerRepository.save(model); }
+    
     public EventOwner get(Long id) {
         return eventOwnerRepository.findById(id)
                 .orElseThrow(() -> new ApiRequestException(EVENT_OWNER_SEARCH_ERROR + id));
