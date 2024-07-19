@@ -86,7 +86,7 @@ public class ServiceService extends ModelMapperFuncs {
     public List<ListedServiceDTO> viewAll() {
         return this.buildResponse(this.serviceRepository.findAll());
     }
-
+    
     public List<ListedServiceDTO> viewByOwner(Long ownerId) {
         return this.buildResponse(serviceOwnerService.get(ownerId).getServices());
     }
